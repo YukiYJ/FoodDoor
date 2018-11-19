@@ -2,7 +2,7 @@
 	position: relative;
 	line-height: 200%;
     top: 100px;
-    width: 500px;
+    width: 520px;
     margin: 0 auto;
     background-color: white;
     padding: 20px 120px 140px 80px;
@@ -12,7 +12,7 @@
 .error {
 	display:none;
 	font-family:Verdana, Geneva, sans-serif;
-    padding: 12px 20px;
+    padding: 0px 20px;
 	margin: 8px 0;
     border: 1px solid #ccc;
 	border-radius: 4px;    
@@ -24,7 +24,8 @@
 .form_input {
     border: 2px solid #f0f0f0;
     border-radius: 5px;
-	padding: 30px;
+    box-shadow: 0px 0px 5px 2px #f0f0f0;
+	padding: 40px 50px;
 }
 
 .form_input ul li{
@@ -37,12 +38,11 @@
     overflow: hidden; 
 }
 .form_input li label{ 
-    width: 120px; 
+    width: 130px; 
     height: 50px; 
     float: left; 
-    line-height: 50px; 
+    line-height: 60px; 
     text-align: right;
-    padding-right: 30px; 
 }
 
 input[type=text], input[type=password], select {
@@ -53,6 +53,8 @@ input[type=text], input[type=password], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+	height: 45px;
+	font-size: 15px;
 }
 
 input[type=submit] {
