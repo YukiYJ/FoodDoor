@@ -6,7 +6,7 @@ header("Content-Type: text/html; charset=utf8");
 
 	//get user's input infomation
 	$firstname = $_POST['firstname'];
-	$lastname = $_POST['surname'];
+	$surname = $_POST['surname'];
     $gender	= $_POST['gender'];
     $username = $_POST['email'];
     $username = $_POST['username'];
@@ -34,9 +34,10 @@ require('topnav.php');
 
 <div class="form_container">
 <?php
-echo "<h2>You have been successfully registered!". $username .", welcome to FoodDoor!</h2>"
+echo "<h2>". $firstname. " " . $surname .", <br>you have been successfully registered! <br>Welcome to FoodDoor!</h2> 
+<h3>Please use your username [ ". $username ." ] <br>and password to login.</h3>"
 ?>
-<a class="btn" href="attractions.html" style="padding:10px 20px; border-corner: 4px;">Order Now!</a>
+<a class="btn" href="login.php" style="padding:10px 20px; border-corner: 4px;">Login Now!</a>
 </div>
 
 </body>
