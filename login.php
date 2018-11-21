@@ -1,10 +1,22 @@
 <?php
+// 2 hours in seconds
+$inactive = 7200; 
+ini_set('session.gc_maxlifetime', $inactive); // set the session max lifetime to 2 hours
+
 session_start();
 echo isset($_SESSION['login']);
 if(isset($_SESSION['login'])) {
-  header('LOCATION:index.php'); die();
+  header('LOCATION:account.php'); die();
 }
+
+if (isset($_SESSION['testing']) && (time() - $_SESSION['testing'] > $inactive)) {
+    // last request was more than 2 hours ago
+    session_unset();     // unset $_SESSION variable for this page
+    session_destroy();   // destroy session data
+}
+$_SESSION['testing'] = time(); // Update session
 ?>
+
 <!DOCTYPE html>
 <!--
 Author: YU Jing
@@ -44,14 +56,12 @@ Author: YU Jing
   <form action="" method="POST">
 	<ul class="form_input">
 		<li>
-		<label for="uname">Username</label>
-		<input type="text" id="username" name="username" placeholder="Your username.." 
-		maxlength="16" required="required">
+			<label for="uname">Username</label>
+			<input type="text" id="username" name="username" placeholder="Your username.." maxlength="16" required="required">
 		</li>
 		<li>
-		<label for="psword">Password</label>
-		<input type="password" id="password" name="password" placeholder="Your password.."
-		maxlength="16" required="required">
+			<label for="psword">Password</label>
+			<input type="password" id="password" name="password" placeholder="Your password.." maxlength="16" required="required">
 		</li>
 		<input type="submit" value="Submit" name="submit"/>
   </form>

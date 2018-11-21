@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Author: Code Apes.
+Author: YU Jing.
 -->
 <html>
 <head>
@@ -25,16 +25,6 @@ Author: Code Apes.
 			document.getElementById("confirm").disabled = false;
 		}  
 	}
-	function checkPassword(){
-		if (document.getElementById("password").value != document.getElementById("con_password").value){
-			document.getElementById("password_error").style.display='block';
-			document.getElementById("confirm").disabled = true;
-		}
-		else{
-			document.getElementById("password_error").style.display='none';
-			document.getElementById("confirm").disabled = false;
-		}
-	}
 	function checkGender(){
 		if (document.getElementById("gender").value == "default"){
 			document.getElementById("gender_error").style.display='block';
@@ -55,35 +45,42 @@ Author: Code Apes.
 			document.getElementById("confirm").disabled = false;
 		}
 	}
-	
+	function checkPassword(){
+		if (document.getElementById("password").value != document.getElementById("con_password").value){
+			document.getElementById("password_error").style.display='block';
+			document.getElementById("confirm").disabled = true;
+		}
+		else{
+			document.getElementById("password_error").style.display='none';
+			document.getElementById("confirm").disabled = false;
+		}
+	}
 	</script>
 </head>
 
 <body>
-<div class="wrapper">
-	<?php
-	require('topnav.php');
-	?>
-</div>
+<?php
+require('topnav.php');
+?>
 
 <div class="form_container">
   <h1>Create a new account</h1>
   <a href="login.php"><h4>Already a member? Login in</h4></a>
-  <form action="/action_page.php">
+  <form action="register_return.php" method="post">
 	<ul class="form_input">
 		<li>
         <label for="">First Name</label>
-		<input type="text" id="firstname" placeholder="Your first name.." title="No longer than 16 characters" maxlength="16">
+		<input type="text" name="firstname" id="firstname" placeholder="Your first name.." title="No longer than 16 characters" maxlength="16">
 		</li>
 		
 		<li>
 		<label for="">Surname</label>
-		<input type="text" id="surname" placeholder="Your surname.." title="No longer than 16 characters" maxlength="16">
+		<input type="text" name="surname" id="surname" placeholder="Your surname.." title="No longer than 16 characters" maxlength="16">
 		</li>
 		
 		<li>
 		<label for="">Gender</label>
-		<select id="gender" onclick="checkGender()">
+		<select name="gender" id="gender" onclick="checkGender()">
 			<option value="default">--Please choose--</option>
 			<option value="male">Male</option>
 			<option value="female">Female</option>
@@ -105,7 +102,7 @@ Author: Code Apes.
 		
 		<li>
         <label for="">Password</label>
-		<input type="password" id="password" name="password" placeholder="Your password.."title="No longer than 16 characters." maxlength="16" onchange="checkPassword()" required="required">
+		<input type="password" id="password" name="password" placeholder="Your password.."title="No longer than 16 characters." minlength="8" maxlength="16" onchange="checkPassword()" required="required">
 		</li>
 		
 		<li>
@@ -116,7 +113,7 @@ Author: Code Apes.
 		</li>
 
 	    <div id="submit">
-			<input type="submit" value="Submit"/>
+			<input type="submit" name="submit" value="Submit"/>
         </div>
 	
 	</ul>
