@@ -3,5 +3,5 @@
 Author: YU Jing
 -->
 <html>
-Test
+<a class="btn" href="logout.php" style="padding:10px 20px;"><u>Logout</u></a></li>
 </html>
