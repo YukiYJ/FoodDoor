@@ -1,5 +1,5 @@
 <?php
-require('session.php');
+require_once('backend/session.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,25 +16,25 @@ Author: YU Jing
 </head>
 
 <body>
-<div class="wrapper">
 	<!-- top navigation menu -->
 	<?php
 	require('topnav.php');
 	?>
 	<!-- end topnav -->
-</div>
-<div class="form_container">
-  <h1>Log in to FoodDoor</h1>
-  <a href="register.php"><h4>No Account? Sign up now!</h4></a>
+
+<div class="container">
+	<h1>Log in to FoodDoor</h1>
+	<a href="register.php"><h4>No Account? -> Sign up now!</h4></a>
   <?php
   if(isset($_POST['submit'])){
     $username = $_POST['username']; $password = $_POST['password'];
-    if($username === 'user01' && $password === 'user2333'){
-		$_SESSION['login'] = true; 
-		header('LOCATION:indexMember.php'); 
+    if($username === 'user' && $password === 'user2333'){
+		#$_SESSION['login_user'] = true;
+		$_SESSION['userid'] = $username;
+		header('LOCATION:index.php'); 
 		die();
 	} else {
-		echo "<h3 style='color:red;'>Username and Password do not match.</h3>";
+		echo "<h3 style='color:red;'>Username and Password do not match. Try again.</h3>";
 	}
   }
   ?>

@@ -10,9 +10,9 @@ A website built for food ordering.
 ## Account
 	For User: 
 		Username: admin
-		Password: admin000
+		Password: admin2333
 	For Admin:
-		Username: user01
+		Username: user
 		Password: user2333
 
 ## Author

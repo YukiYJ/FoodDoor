@@ -63,19 +63,19 @@ Author: YU Jing.
 require('topnav.php');
 ?>
 
-<div class="form_container">
+<div class="container">
   <h1>Create a new account</h1>
-  <a href="login.php"><h4>Already a member? Login in</h4></a>
+  <a href="login-user.php"><h4>Already a member? -> Login in</h4></a>
   <form action="register_return.php" method="post">
 	<ul class="form_input">
 		<li>
         <label for="">First Name</label>
-		<input type="text" name="firstname" id="firstname" placeholder="Your first name.." title="No longer than 16 characters" maxlength="16">
+		<input type="text" name="firstname" id="firstname" placeholder="Your first name.." title="" maxlength="45">
 		</li>
 		
 		<li>
 		<label for="">Surname</label>
-		<input type="text" name="surname" id="surname" placeholder="Your surname.." title="No longer than 16 characters" maxlength="16">
+		<input type="text" name="surname" id="surname" placeholder="Your surname.." title="" maxlength="45">
 		</li>
 		
 		<li>
@@ -84,25 +84,25 @@ require('topnav.php');
 			<option value="default">--Please choose--</option>
 			<option value="male">Male</option>
 			<option value="female">Female</option>
-			<option value="other">Other</option>
+			<option value="others">Others</option>
 		</select>
 		<div id="gender_error" class="error">Please choose a gender.</div><br>
 		</li>
 		
 		<li>
 		<label for="">Email</label>
-		<input type="text" id="email" name="email" placeholder="Your email.." onchange="checkEmail()"required="required">
+		<input type="text" id="email" name="email" placeholder="Your email.." onchange="checkEmail()" required="required">
 		<div id="email_error" class="error">You email is invalid.</div>
 		</li>
 	
 		<li>
         <label for="">Username</label>
-		<input type="text" id="username" name="username" placeholder="Your username.." title="No longer than 8 characters" maxlength="8" required="required">
+		<input type="text" id="username" name="username" placeholder="4-10 characters.." title="4 - 10 characters" minlength="4" maxlength="10" required="required">
 		</li>
 		
 		<li>
         <label for="">Password</label>
-		<input type="password" id="password" name="password" placeholder="Your password.."title="No longer than 16 characters." minlength="8" maxlength="16" onchange="checkPassword()" required="required">
+		<input type="password" id="password" name="password" placeholder="8-16 characters.."title="8 - 16 characters." minlength="8" maxlength="16" onchange="checkPassword()" required="required">
 		</li>
 		
 		<li>

@@ -1,26 +1,33 @@
+<?php
+require_once('backend/session.php');
+?>
 <div class="wrapper">
 		<nav class="topnav">
 			<div id="logo" class="fl_left">
 				<a href="index.html"><img src="img/logo.jpg" alt="Homepage"></a>
 			</div>
 			<div class="topmenu">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="attraction.php">Attraction</a></li>
-				<li><a href="accommodation.php">Accommodation</a></li>
-				<li><a href="food.php">Food</a></li>
-				<li><a href="plan.php">Plan</a></li>
-				<li><a href="about.php">About</a></li>
-				<div id="account" class="fl_right">
-					<li><a href="Login.html"><img src="img/account_icon.png" alt="account"></a></li>
+				<li><a href="index.php">Menu</a></li>
+				<?php
+				if(!isset($_SESSION['adminid'])){
+					echo('<li><a href="cart.php">Cart</a></li>');
+				}
+				else {
+					echo('<li><a href="manage.php">Management</a></li>');
+				}
+				?>
+				
+				<div class="login-btn">
+				<?php
+				if(!isset($_SESSION['userid']) && !isset($_SESSION['adminid'])){
+					echo('<button onclick="location.href=\'login-user.php\'">User</button>');
+					echo('<button onclick="location.href=\'login-admin.php\'" style="margin-right:20px;">Admin</button>');
+				}
+				else {
+					echo('<button onclick="location.href=\'logout.php\'" style="margin-right:20px;">Logout</button>');
+				}
+				?>
 				</div>
 			</div>
 		</nav>
 </div>
-
-<script type="text/javascript">
-// Add active class to the current button (highlight it)
-$( ".wrapper .topnav .topmenu a" ).on( "click", function () {
-	$( ".wrapper .topnav .topmenu" ).find( "li.active" ).removeClass( "active" );
-	$( this ).parent( "li" ).addClass( "active" );
-});
-</script>

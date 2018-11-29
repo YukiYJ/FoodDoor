@@ -34,6 +34,26 @@ tr:hover {background-color:#f5f5f5;}
 
 img{width:auto; max-width:100%; height:auto; margin:0; padding:0; border:none; line-height:normal; vertical-align:middle;}
 
+button, .btn {
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+    background-color: #70C745;
+    padding: 12px 18px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover, .btn:hover {
+	font-weight: bold;
+	background-color:transparent; 
+    padding: 10px 16px;
+	border-color:#70C745;
+	color: #70C745;
+	border:2px solid;
+}
 /*
 The "hoc" class is a generic class used to centre a containing element horizontally
 It should be used in conjunction with a second class or ID
@@ -47,8 +67,21 @@ It should be used in conjunction with a second class or ID
 	display:block; 
 }
 
-/* padding a sub-setion page */
-.container{padding:150px 120px 100px 80px;}
+/* padding a page */
+.container{
+	position: relative;
+	line-height: 200%;
+    top: 100px;
+    width: 520px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px 120px 140px 80px;
+	text-align: center;
+}
+
+.container h1 {
+	margin-bottom:40px;
+}
 
 /* convenient for element's position justify */
 .fl_left, .imgl{float:left;}
@@ -70,41 +103,36 @@ It should be used in conjunction with a second class or ID
 
 .topnav{
 	padding: 0px;
-	background-color: #fff;
-	position:fixed;
+	background-color: #f8f9fa;
+	position:fixed !important;
     z-index: 100;
     width: 100%;
 	max-width:100%;
-	box-shadow: 3px 2px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.19);
 	text-align:center; 
 }
 
-.searchbar {
-  position: relative;
-  padding: 0.5rem 1rem;
-  background-color: #f8f9fa !important;
-  text-align:right;
+.login-btn {
+	float:right;
+	text-align:right;
 }
 
-.searchbar input[type=text] {
-  padding: 5px;
-  font-size: 17px;
-  border: none;
+.login-btn button{
+    margin-top: 15px;
+	margin-right:8px;
+    padding: 8px 16px;
+	font-size: 14px;
 }
 
-.searchbar .search-container button {
-  padding: 5px 10px;
-  margin-right: 5px;
-  color:#FFFFFF; 
-  background-color:#BB4348;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-  text-decoration:none;
+.login-btn button:hover {
+    margin-top: 15px;
+	margin-right:8px;
+    padding: 6px 14px;
+	font-size: 14px;
 }
 
 #logo{
-	margin: -5px 20px 0px 25px;
+	margin: -5px 20px 0px 40px;
 }
 
 #logo img{
@@ -146,7 +174,7 @@ It should be used in conjunction with a second class or ID
 	content: "";
 	position: absolute;
 	height: 4px;
-	background-color: #BB4348;
+	background-color: #70C745;
 	width: 0;
 	left: 50%;
 	bottom: 0;
@@ -158,8 +186,8 @@ It should be used in conjunction with a second class or ID
 }
 
 .topmenu a:hover, .sidebar a:hover{
-	background-color:#fff;
-	color:#BB4348;
+	background-color:#f8f9fa;
+	color:#70C745;
 }
 
 
@@ -202,25 +230,6 @@ It should be used in conjunction with a second class or ID
 }
 #intro article footer{margin-top:30px;}
 
-.btn, .btn-inverse{
-	display:inline-block; 
-	padding:5px 20px; 
-	border:3px solid;
-	text-decoration:none;
-	font-weight: bold;
-}
-
-.btn-small{
-	display:inline-block; 
-	padding:4px 15px; 
-	font-size: 14px;
-	text-decoration:none;
-}
-
-.btn, .btn-inverse:hover{color:#FFFFFF; background-color:#BB4348; border-color:#FFFFFF;}
-.btn:hover, .btn-inverse{color:inherit; background-color:transparent; border-color:#BB4348;}
-
-
 
 /* left float sidebar */
 .sidebar{
@@ -235,7 +244,7 @@ It should be used in conjunction with a second class or ID
 }
 
 .sidebar a{
-	background-color:#BB4348;
+	background-color:#70C745;
 	display: block; 
 	text-decoration: none; 
 	color: #fff;
@@ -250,7 +259,7 @@ It should be used in conjunction with a second class or ID
 }
 
 .sidebar h3{
-	color: #BB4348;
+	color: #70C745;
 	text-align: center;
 	padding:5px;
 }
@@ -261,7 +270,7 @@ It should be used in conjunction with a second class or ID
 
 .dropdown-container {
     display: none;
-    background-color: #BB4348;
+    background-color: #70C745;
     padding-left: 8px;
 }
 
@@ -312,11 +321,11 @@ It should be used in conjunction with a second class or ID
 }
 
 li.active > a {
-	color: #BB4348;
+	color: #70C745;
 	background-color: #fff;
 }
 
 .active a{
-	color: #BB4348;
+	color: #70C745;
 	background-color: #fff;
 }

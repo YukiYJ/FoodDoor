@@ -1,0 +1,65 @@
+[
+  {
+      "id": 1,
+      "type": "appetizer",
+      "name": "Fried Asparagus",
+      "price": "4.50",
+      "description": "Fresh asparagus lightly battered and quick-fried. Topped with crumbled queso fresco, chopped cilantro & a drizzle of chimichurri sauce. Served with roasted garlic aioli."
+  },
+  {
+      "id": 2,
+      "type": "appetizer",
+      "name": "Loaded Boneless Wings",
+      "price": "6.75",
+      "description": "Boneless wings smothered in white queso, 3-cheese blend, applewood smoked bacon & chopped green onions. Served with a side of house-made ranch."
+  },
+  {
+      "id": 3,
+      "type": "appetizer",
+      "name": "White Spinach Queso",
+      "price": "5",
+      "description": "White queso & chopped spinach topped with shredded Monterey Jack cheese, house-made pico de gallo, fresh guacamole, queso fresco & chopped cilantro. Served with warm tostada chips & fresh salsa."
+  },
+  {
+      "id": 4,
+      "type": "appetizer",
+      "name": "Crispy Cheddar Bites",
+      "price": "7.25",
+      "description": "Lightly battered & golden fried white & yellow Wisconsin cheese curds topped with a sprinkle of Cajun spice and chopped cilantro. Served with house-made ancho-chile ranch."
+  },
+  {
+      "id": 5,
+      "type": "soup_salad",
+      "name": "House Salad",
+      "price": "3.50",
+      "description": "Freshly diced tomatoes, red onion, shredded carrots, cucumbers, 3-cheese blend & garlic croutons. Served with your choice of dressing."
+  },
+  {
+      "id": 6,
+      "type": "soup_salad",
+      "name": "Santa Fe Chicken Salad",
+      "price": "8",
+      "description": "Grilled chile-seasoned chicken, house-made pico de gallo, diced avocado, chopped cilantro, tortilla strips with house-made ranch & a drizzle of spicy Santa Fe sauce."
+  },
+  {
+      "id": 7,
+      "type": "soup_salad",
+      "name": "Chicken Enchilada Soup",
+      "price": "5",
+      "description": "Topped with crispy tortilla strips & 3-cheese blend."
+  },
+  {
+      "id": 8,
+      "type": "soup_salad",
+      "name": "Terlingua Chili",
+      "price": "6.35",
+      "description": "Slow-cooked chili with beef, onions & chiles. Topped with cheese."
+  },
+  {
+      "id": 9,
+      "type": "burger",
+      "name": "Sweet & Smoky Burger",
+      "price": "8.75",
+      "description": "Topped with melted pepper Jack cheese, applewood smoked bacon,spiced panko onion rings, fresh leaf lettuce, tomato,mango-infused BBQ sauce & Chili's Signature sauce. Served with a side of mango-infused BBQ sauce."
+  }
+]
