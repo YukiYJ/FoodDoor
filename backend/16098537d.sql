@@ -35,28 +35,33 @@ COMMIT;
 
 
 -- -----------------------------------------------------
--- Table `16098537d`.`food`
+-- Table `16098537d`.`tblproduct`
 -- -----------------------------------------------------
-CREATE TABLE `food` (
+DROP TABLE IF EXISTS `16098537d`.`tblproduct` ;
+
+CREATE TABLE `tblproduct` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `foodtype` varchar(255) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `foodtype` varchar(50) NOT NULL,
   `image` text NOT NULL,
   `price` double(6,2) NOT NULL,
-  PRIMARY KEY (`id`));
+  `idg` varchar(255) NOT NULL,
+  `code` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `product_code`(`code`));
 
 
 -- -----------------------------------------------------
--- Data for table `16098537d`.`food`
+-- Data for table `16098537d`.`tblproduct`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `16098537d`;
-INSERT INTO `food` (`id`, `name`, `foodtype`, `image`, `price`) VALUES
-(1, 'Fried Asparagus', 'appetizer', '1.jpg', 38.00),
-(2, 'Boneless Wings', 'appetizer', '2.jpg', 40.00),
-(3, 'House Salad', 'salad', '3.jpg', 48.00),
-(4, 'Shrimp Salad', 'salad', '4.jpg', 58.00),
-(5, 'Mixed Salad', 'salad', '5.jpg', 50.00),
-(6, 'Smoky Burger', 'burger', '6.jpg', 68.00);
+INSERT INTO `16098537d`.`tblproduct` (`id`, `name`, `foodtype`, `image`, `price`, `idg`, `code`) VALUES
+(1, 'Fried Asparagus', 'appetizer', 'img/1.jpg', 38.00, 'asparagus', 'FA'),
+(2, 'Boneless Wings', 'appetizer', 'img/2.jpg', 40.00, 'chicken wings', 'BW'),
+(3, 'House Salad', 'salad', 'img/3.jpg', 48.00, 'chicken, vegetables', 'HS'),
+(4, 'Shrimp Salad', 'salad', 'img/4.jpg', 58.00, 'shrimps, vegetables', 'SS'),
+(5, 'Mixed Salad', 'salad', 'img/5.jpg', 50.00, 'vegetables, fruits', 'MS'),
+(6, 'Smoky Burger', 'burger', 'img/6.jpg', 68.00, 'bread, beef, lettuce', 'SB');
 COMMIT; 
 

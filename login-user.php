@@ -1,5 +1,5 @@
 <?php
-require_once('backend/session.php');
+session_start();
 ?>
 
 <!DOCTYPE html>

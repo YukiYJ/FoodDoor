@@ -1,12 +1,12 @@
 <?php
-require_once('backend/session.php');
+session_start();
 if (!isset($_SESSION['adminid'])){
-	header("Location:login-admin.php");
+	echo "Only administrator can manage users. Please login!";
+	header("Refresh:1; url=login-admin.php");
 } else {
 	require('backend/connect.php');
 	$sql="SELECT UserID,Username,Firstname,Surname,Gender,Email FROM User";
 	$result = mysqli_query($link,$sql);
-}
 ?>
 
 <!DOCTYPE html>
@@ -81,8 +81,8 @@ Author: YU Jing
 				<td><?php echo $row['Email']?></td>
 			  </tr>
 			  <?php
-					}} 
-					$link.close();
+}} 
+					$link->close();}
 			  ?>
 			  
 			</table>

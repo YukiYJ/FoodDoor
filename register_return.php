@@ -1,4 +1,5 @@
 <?php
+session_start();
 header("Content-Type: text/html; charset=utf8");
     if(!isset($_POST["submit"])){
         exit("error ");

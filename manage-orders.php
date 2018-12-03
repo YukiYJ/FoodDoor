@@ -1,5 +1,9 @@
 <?php
-require_once('backend/session.php');
+session_start();
+if (!isset($_SESSION['adminid'])){
+	echo "Only administrator can manage users. Please login!";
+	header("Refresh:1; url=login-admin.php");
+} else {
 ?>
 
 <!DOCTYPE html>
@@ -107,3 +111,4 @@ Author: YU Jing
 
 </body>
 </html>
+<?php } ?>

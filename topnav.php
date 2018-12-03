@@ -1,6 +1,3 @@
-<?php
-require_once('backend/session.php');
-?>
 <div class="wrapper">
 		<nav class="topnav">
 			<div id="logo" class="fl_left">

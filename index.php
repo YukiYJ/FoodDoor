@@ -1,8 +1,8 @@
 <?php
-require_once('backend/session.php');
+session_start();
 if (isset($_SESSION['userid'])){
 	require('backend/connect.php');
-	$sql="SELECT FoodID,Foodname,Foodtype,Price,Image FROM Food";
+	$sql="SELECT * FROM Food";
 	$result = mysqli_query($link,$sql);
 }
 ?>
@@ -47,7 +47,7 @@ Author: YU Jing
 
 		  <?php
 				}} 
-				$link.close();
+				$link->close();
 		  ?>
 	
 		

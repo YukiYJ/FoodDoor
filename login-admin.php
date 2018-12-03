@@ -1,5 +1,5 @@
 <?php
-require_once('backend/session.php');
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ Author: YU Jing
     if($username === 'admin' && $password === 'admin2333'){
 		#$_SESSION['login_admin'] = true;
 		$_SESSION['adminid'] = $username;
-		header('LOCATION:index.php'); 
+		header('LOCATION:manage.php'); 
 		die();
 	} else {
 		echo "<h3 style='color:red;'>Username and Password do not match. Try again.</h3>";

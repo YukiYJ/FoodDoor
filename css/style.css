@@ -140,17 +140,6 @@ It should be used in conjunction with a second class or ID
 	width:75px;
 }
 
-#account {
-	margin-right: 20px;
-}
-
-#account img{
-	height: 30px; 
-	width: 30px;
-	margin-bottom: -8px;
-	margin-top: -8px;
-}
-
 .topmenu li{
 	display: inline-block;
 	margin: 0px auto;
@@ -208,79 +197,6 @@ It should be used in conjunction with a second class or ID
 	background-size:cover;
 }
 
-#intro{
-	padding: 90px 100px;
-	font-weight: bold;
-	text-shadow: black 0.1em 0.1em 0.2em;
-	color:#FFFFFF;
-	text-align:left; 
-}
-
-#intro article {}
-#intro article h2{
-	font-size:52px; 
-	font-family: Verdana, sans-serif;
-	color: #fff;
-}
-
-#intro article p{
-	margin: 0;
-	font-size: 20px; 
-	margin: 15px 0px; 
-}
-#intro article footer{margin-top:30px;}
-
-
-/* left float sidebar */
-.sidebar{
-	height:auto;
-	width:190px;
-	position:fixed!important;
-	z-index:1;
-	overflow:auto; 
-	font-weight: bold;
-    letter-spacing: 1px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.sidebar a{
-	background-color:#70C745;
-	display: block; 
-	text-decoration: none; 
-	color: #fff;
-	padding: 15px 20px;
-	border-top: 1px solid #F0F0F0;
-	font-size:15px;
-	text-align: center;
-}
-
-.sidebar a:hover{
-	box-shadow: 2px 2px 15px 0 rgba(0, 0, 0, 0.2);
-}
-
-.sidebar h3{
-	color: #70C745;
-	text-align: center;
-	padding:5px;
-}
-
-.dropdown {
-    cursor: pointer;
-}
-
-.dropdown-container {
-    display: none;
-    background-color: #70C745;
-    padding-left: 8px;
-}
-
-.dropdown-container a{
-	color: #151517;
-	padding: 10px;
-	background-color: #FFF;
-	text-align: left;
-}
-
 .content {
 	margin-left:28%;
 	background-color: #FFFFFF;
@@ -295,29 +211,6 @@ It should be used in conjunction with a second class or ID
 
 .content h2{
 	padding-top:10px;
-}
-
-.imgl, .imgr{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	height: 33%;
-	width: 33%;
-}
-.imgl{margin-right:30px;}
-.imgr{margin-left:30px;}
-
-
-.footer { 
-  padding: 0.5rem 0;
-  width: 100%;
-  background-color: #151517;
-  text-align: center;
-  margin-top: 50px;
-}
-
-#copyright{
-	font-size: 14px;
-	color: #fff;
 }
 
 li.active > a {
