@@ -1,19 +1,21 @@
-# Online food ordering system
-A website built for food ordering.
+# FoodDoor
+A website built for online food ordering.
 
-## Run
-	(To be added later)
-
-## Links
-	www2.comp.polyu.edu.hk/~16098537d/orderMe
+## URL
+	http://www2.comp.polyu.edu.hk/~16098537d/FoodDoor/
 
 ## Account
-	For User: 
+	For Admin: 
+	(Click "Admin" button on the right-corner of each page to login)
+	
 		Username: admin
 		Password: admin2333
-	For Admin:
+		
+	For User:
+	(Click "User" button on the right-corner of each page to login)
+	
 		Username: user
 		Password: user2333
 
 ## Author
-	YU Jing (16098537D)
+	YU Jing
